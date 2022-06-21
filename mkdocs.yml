@@ -49,6 +49,7 @@ plugins:
   - awesome-pages
   - git-revision-date-localized:
       type: date
+  - external-markdown
   - redirects:
       redirect_maps:
         # Folder: /start/
@@ -75,11 +76,11 @@ plugins:
         'fbw-a32nx/feature-guides/fixinfo.md': 'pilots-corner/advanced-guides/flight-planning/fixinfo.md'
 
         # additional redirects:
-        'fbw-a32nx/feature-guides/throttle-calibration.md': 'fbw-a32nx/feature-guides/flyPad/throttle-calibration.md'
+        'fbw-a32nx/feature-guides/throttle-calibration.md': 'fbw-a32nx/feature-guides/flypados3/throttle-calibration.md'
         # Convenience redirects:
         'beginner-guide.md': 'pilots-corner/beginner-guide/overview.md'
         'installation.md': 'fbw-a32nx/installation.md'
-        'throttle.md': 'fbw-a32nx/feature-guides/flyPad/throttle-calibration.md'
+        'throttle.md': 'fbw-a32nx/feature-guides/flypados3/throttle-calibration.md'
         'reported-issues.md': 'fbw-a32nx/support/reported-issues.md'
         'support.md': 'fbw-a32nx/support/index.md'
         'discord-bot.md': 'dev-corner/development-projects/discord-bot.md'
@@ -87,11 +88,11 @@ plugins:
         'fdr.md': 'https://docs.flybywiresim.com/fbw-a32nx/support/#fdr-files'
         'exp.md': 'fbw-a32nx/support/exp.md'
         # Release Notes Permalink
-        'latest-release.md': 'release-notes/v074.md'
+        'latest-release.md': 'release-notes/v082.md'
         # ########################################
         # Needed for URL within the A32NX aircraft
         # ########################################
-        'telex.md': "https://bityl.co/8qKq" # fbw-a32nx/feature-guides/flyPad/settings/#atsuaoc
+        'telex.md': "https://bityl.co/8qKq" # fbw-a32nx/feature-guides/flypad/settings/#atsuaoc
 
 # Styling Front-end
 extra_css:

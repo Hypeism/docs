@@ -39,16 +39,13 @@ This is best explained by simBrief itself - [simBrief User Guide](https://www.si
 
 ### Setup A32NX simBrief Integration
 
-The simbrief username needs to configured in the flyPad EFB. See [Setup simBrief Integration](flyPad/settings.md#simbrief-integration)
-
-!!! warning "Stable Version: simBrief Configuration"
-    In addition to the flyPad EFB configuration the Stable version also needs the simbrief ID to be configured in the MCDU MENU page under `OPTIONS -> AOC -> SIMBRIEF`.
+The simbrief username needs to configured in the flyPad EFB. See [Setup simBrief Integration](flypados3/settings.md#simbrief-integration)
 
 ### Importing the simBrief OFP to the flyPad
 
-See [flyPad Guide - Load from simBrief](flyPad/dashboard.md#load-from-simbrief)
+See [flyPad Guide - Load from simBrief](flypados3/dashboard.md#load-from-simbrief)
 
-See [flyPad Guide - OFP](flyPad/dispatch.md#ofp-page) on how to view the simBrief Operational Flight Plan.
+See [flyPad Guide - OFP](flypados3/dispatch.md#ofp-page) on how to view the simBrief Operational Flight Plan.
 
 See [Fuel and Weight](loading-fuel-weight.md) on how to load fuel and payload.
 
@@ -62,16 +59,17 @@ We've included a quick method to have your simBrief OFP automatically loaded int
 
 This portion of the guide assumes that you understand how to generate a simBrief OFP.
 
-<!--#### ^^SimBrief MCDU Setup^^
+!!! warning "Please Enable Detailed Navlog simBrief Setting"
+    ![OFP Settings](../assets/feature-guides/simbrief/OFP-settings.png){loading=lazy align=left} 
 
-Enter your simBrief username. Upon entering your username the MCDU will convert it into an ID number. Please ensure you have no special characters in your username OR use the ID number found before generating your OFP.
+    It is important when generating your simBrief OFP to ensure that the Detailed Navlog setting is enabled. 
 
-* Click on `MCDU MENU`
-* Click on `OPTIONS`
-* Click on `AOC`
-* Click on `SIMBRIEF`-->
+    This setting is available when generating a new dispatch. Additionally, we recommend that you save any of your preferred settings here including Detailed Navlog as the 
+    default by clicking on `Save Default`. This ensures that this setting is never disabled when generating a new OFP.
 
-#### ^^Request Data from simBrief^^
+    If setting is not enabled the import function may only populate the departure and arrival airports into the flight page on the MCDU.
+
+#### Request Data from simBrief
 
 * Return to `MCDU MENU`
 * Click on `ATSU`
@@ -83,7 +81,7 @@ Enter your simBrief username. Upon entering your username the MCDU will convert 
 
 This will prepare the MCDU to input the flight plan.
 
-#### ^^Initialize Flight Plan^^
+#### Initialize Flight Plan
 
 !!! warning "IMPORTANT"
     Do not select an arrival airport on the MSFS world menu or flight planner. Doing this "initializes" the `FROM/TO` field when loading into your flight removing the INIT REQ. option from the `INIT A` page.

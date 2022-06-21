@@ -2,8 +2,6 @@
 
 <link rel="stylesheet" href="/../../stylesheets/web-mcdu.css">
 
-!!! warning "Not available in the Stable Version"
-
 ## Overview
 
 The MCDU Web Interface allows you to display and control the MCDU on a browser including browsers on mobile devices like phones or tablets.
@@ -56,12 +54,13 @@ A setting in the fylPad EFB Sim Options page has been introduced to allow users 
 
 The three settings are:
 
-- Auto On:
-    - The MCDU attempts to connect to the MCDU Server for 5min after pressing "Ready to Fly".
+- Auto:
+    - The MCDU attempts to connect to the MCDU Server for 5min after pressing "Ready to Fly" (`Active` is shown).
     - If this setting is selected the MCDU will try to connect to the MCDU Server for 5min after every start of a new flight.
-- Auto Off:
-    - After 5min of unsuccessful connection attempts the MCDU will stop any further attempts and this setting will be automatically set.
-- Perm Off:
+    - After 5min of unsuccessful connection attempts the MCDU will stop any further attempts and `Inactive` will be 
+      shown.
+    - If `Inactive` is shown but you want to connect to the MCDU server just click on `Off` and then `Auto` again. 
+- Off:
     - The MCDU will not make any attempts to connect to the MCDU Server.
 
 ### Browser on Local PC
@@ -78,7 +77,8 @@ If you want to start with only the MCDU display and not the whole MCDU panel the
 
 ### Browser on Remote Device
 
-If you want to use the MCDU Web Interface from a remote device (e.g. tablet, phone, 2nd PC, etc.) you need to first make sure you can access the MCDU Web Interface on your PC by allowing incoming network connections to the server through your Windows Firewall. See how to do this here: [Windows Firewall](#windows-firewall)
+If you want to use the MCDU Web Interface from a remote device (e.g. tablet, phone, 2nd PC, etc.) you need to first make sure you can access the MCDU Web Interface on your PC 
+by allowing incoming network connections to the server through your Windows Firewall. See how to do this here: [Firewall Configuration](#firewall-configuration).
 
 The MCDU Server command window tries to detect your IP address. Use the `http://xxx.xxx.xxx.xxx:8125` address and enter it into your browser on the remote device.
 
@@ -361,7 +361,7 @@ Of course now the firewall might need to be opened for this new port.
 
 #### Websocket Port is Occupied
 
-If the port for the MCDU Websocket Server is occupied you need to first change this port in the [flyPad EFB Sim options page](/fbw-a32nx/feature-guides/flyPad/settings/#sim-options).
+If the port for the MCDU Websocket Server is occupied you need to first change this port in the [flyPad EFB Sim options page](flypados3/settings.md#sim-options).
 
 You can then start the MCDU server using the new websocket port with this option:
 
@@ -452,9 +452,15 @@ For this to work the browser must be able to reach the MCDU Server via the two T
 ??? warning "MCDU Server: `Waiting for Simulator...` Although Flight is Started"
     The MCDU Server continues to show `Waiting for simulator ...` although the flight is started and aircraft is loaded.
 
-    The web socket port 8380 is already in use.
+    Two known causes:
+    
+    - The web socket port 8380 is already in use.
+    - MCDU Server Connection Timeout 
 
-    Solution: [Websocket Port is Occupied](#websocket-port-is-occupied)
+    Solution: 
+
+    - [Websocket Port is Occupied](#websocket-port-is-occupied)
+    - [MCDU Server Connection Timeout](#mcdu-server-connection-attempts-timeout)
 
 ??? warning "MCDU Server Error: Failed to load printers"
 

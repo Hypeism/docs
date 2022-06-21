@@ -61,7 +61,7 @@ You can send us logs to our [Discord](https://discord.gg/flybywire){target=new} 
 
           Stable is our variant that has the least bugs and best performance. This version will not always be up to date but we gurantee its compatibility with each major patch from MSFS. 
 
-          [Download Stable](https://api.flybywiresim.com/api/v1/download?url=https://flybywiresim-packages.b-cdn.net/stable/A32NX-stable.zip){ .md-button target=new}
+          [Download Stable](https://cdn.flybywiresim.com/addons/a32nx/stable/full.zip){ .md-button target=new}
 
           You can see the changelog on the releases page: [View Here](https://github.com/flybywiresim/a32nx/releases){target=new}
 
@@ -72,7 +72,7 @@ You can send us logs to our [Discord](https://discord.gg/flybywire){target=new} 
 
         It updates whenever something is added to the 'master' branch on GitHub. 
 
-         [Download Development](https://api.flybywiresim.com/api/v1/download?url=https://flybywiresim-packages.b-cdn.net/vmaster/A32NX-master.zip){ .md-button target=new}
+         [Download Development](https://cdn.flybywiresim.com/addons/a32nx/master/full.zip){ .md-button target=new}
          
          [**IMPORTANT:** View information on Autopilot / Fly-By-Wire here](feature-guides/autopilot-fbw.md)
 
@@ -86,7 +86,7 @@ You can send us logs to our [Discord](https://discord.gg/flybywire){target=new} 
     
         It will be updated with the latest changes to the development version every week or so while new major features are tested (not guaranteed).
 
-        [Download Experimental](https://api.flybywiresim.com/api/v1/download?url=https://flybywiresim-packages.b-cdn.net/experimental/A32NX-experimental.zip){ .md-button target=new}
+        [Download Experimental](https://cdn.flybywiresim.com/addons/a32nx/experimental/full.zip){ .md-button target=new}
 
         !!! danger "No Support for Experimental - use at own risk"
             Please do not seek support for the Experimental Version on Discord and only report issues if you have read this page and the reported and known issues.
@@ -249,8 +249,8 @@ The FlyByWire Simulations simBrief airframe with correct weights is available be
 
     Please stay tuned to our social media for updates.
 
-- **Stable Version**: ✈ [SimBrief Airframe Link](https://www.simbrief.com/system/dispatch.php?sharefleet=eyJ0cyI6IjE2MzU1MjIxNTI2NzUiLCJiYXNldHlwZSI6IkEyME4iLCJjb21tZW50cyI6IkZMWUJZV0lSRSBBMzJOWCBTVEFCTEUiLCJpY2FvIjoiQTIwTiIsIm5hbWUiOiJGQlcgQTMyTlgiLCJlbmdpbmVzIjoiTEVBUC0xQTI2IiwicmVnIjoiRC1BRkJXIiwiZmluIjoiIiwic2VsY2FsIjoiQUdMUiIsImhleGNvZGUiOiIiLCJjYXQiOiJNIiwicGVyIjoiQyIsImVxdWlwIjoiU0RFMkUzRkdISUoxUldYWSIsInRyYW5zcG9uZGVyIjoiTEIxIiwicGJuIjoiQTFCMUMxRDFPMVMyIiwiZXh0cmFybWsiOiJGTFlCWVdJUkUgQTMyTlgiLCJtYXhwYXgiOiIxNzQiLCJ3Z3R1bml0cyI6IktHUyIsIm9ldyI6IjQ2MjYyIiwibXpmdyI6IjY0MzAwIiwibXRvdyI6Ijc5MDAwIiwibWx3IjoiNjc0MDAiLCJtYXhmdWVsIjoiMTkwNDUiLCJwYXh3Z3QiOiIxMDQiLCJkZWZhdWx0Y2kiOiIxNSIsImZ1ZWxmYWN0b3IiOiJQMTAiLCJjZWlsaW5nIjoiMzk4MDAiLCJjcnVpc2VvZmZzZXQiOiJQMDAwMCJ9){target=new}
-- **Development and Experimental Versions**: ✈ [SimBrief Airframe Link](https://www.simbrief.com/system/dispatch.php?sharefleet=337364_1631550522735){target=new} - Credits: [@sidnov](https://github.com/sidnov){target=new}
+- **All Versions**: ✈ [SimBrief Airframe Link](https://www.simbrief.com/system/dispatch.php?sharefleet=337364_1631550522735){target=new} - Credits: [@sidnov](https://github.
+  com/sidnov){target=new}
 
 Pilot ID can be found in the Optional Entries section of the Dispatch Options page.
 

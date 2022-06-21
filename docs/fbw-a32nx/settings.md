@@ -30,11 +30,25 @@ Set the `Glass Cockpit Refresh Rate` to `Medium` or `Low` to avoid unnecessary d
 
 ### Deactivate MSFS Assistance Features
 
-Please turn off all MSFS Assistance and AI functions while using the A32NX as they interfere with the A32NX custom systems!
+A warning will be displayed if you have certain AI assistance features turned on. Please ensure you have disabled them.
 
-![MSFS Assistance Options](assets/settings/assistance-options.png "MSFS Assistance Options"){loading=lazy}
+!!! tip ""
+    Having any AI features or assistance features switched on created some stability issues with our custom systems:
 
-![MSFS AI Options](assets/settings/ai-options.png "MSFS AI Options"){loading=lazy}
+    - A/THR failing to arm or activate.
+    - Engines turning off in-flight or after takeoff.
+    - Constant right or left rudder.
+    - Inability to taxi.
+
+<!--![AI Settings New](assets/settings/ai-settings-new.png){loading=lazy}-->
+
+??? tip "Verify Settings"
+    You can verify the assistance and AI features are switched off by checking the following settings.
+
+    ![MSFS Assistance Options](assets/settings/assistance-options.png "MSFS Assistance Options"){loading=lazy}
+
+    ![MSFS AI Options](assets/settings/ai-options.png "MSFS AI Options"){loading=lazy}
+
 
 ### Legacy Cockpit Interaction System
 
@@ -52,8 +66,6 @@ Sensitivity settings are highly hardware depended and can be different for each 
 
 #### Sidestick / Joystick
 
-!!! warning "Not applicable for the Stable version."
-
 We **highly recommend** to use a joystick or flight stick when flying any aircraft in a simulator. Keyboard or controller buttons simply do not have the range and sensitivity required for successfully controlling an aircraft.
 
 For the flight stick pitch control (up/backward and down/forward) we recommend using a sensitivity setting of `-30%` to better simulate the increased force you need to **push or pull** the real sidestick in the aircraft. Please see the screenshot below for an example:
@@ -68,11 +80,27 @@ For the rudder, which by default also controls the nosewheel in MSFS, we recomme
 
 On the Development version if you have an extra axis on your controllers (e.g. twisting joystick while rudder is on pedals) you can separate the nosewheel steering via tiller from the rudder inputs. See [Nosewheel Tiller Separation](feature-guides/nw-tiller.md).
 
+??? tip "Racing Pedals Compatibility"
+    The following configuration can be used with the A32NX if you use racing pedals. *Please note* that this may not work for all variations of racing pedals but can serve as a 
+    starting point for your settings.
+
+    Check and map the following settings:
+    
+    - Accelerator Pedal -> `RUDDER AXIS RIGHT` (Reverse Axis with checkmark)
+    - Clutch Pedal -> `RUDDER AXIS LEFT` (Reverse Axis with checkmark)
+    - Accelerator Pedal + Clutch Pedal -> `CENTER RUDDER` (This will center the rudder if it remains deflected)
+    
+    Sample configuration:
+
+    ![Racing Pedals Config](assets/settings/racing-pedals-config.png){loading=lazy}
+
+    <sub>Thanks to SteveCollins100 for the configuration tip.</sub>
+
 #### Throttle
 
 Throttle should have linear sensitivity.
 
-See [Throttle Calibration Guide](feature-guides/flyPad/throttle-calibration.md).
+See [Throttle Calibration Guide](feature-guides/flypados3/throttle-calibration.md).
 
 ### Keyboard Mapping for Pause Function
 
@@ -108,7 +136,7 @@ See our [Installation Guide](installation.md).
 
 Our Custom Autopilot implementation requires that the throttle is calibrated to be able to correctly recognize the detents the A320 autoflight system relies on.
 
-See [Throttle Calibration Guide](feature-guides/flyPad/throttle-calibration.md)
+See [Throttle Calibration Guide](feature-guides/flypados3/throttle-calibration.md)
 
 ### Error Reporting
 

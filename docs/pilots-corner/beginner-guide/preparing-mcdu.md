@@ -255,11 +255,6 @@ Verify the flight plan by using the vertical slew keys to scroll through it.
 !!! info "Viewing Flight Plan on ND"
     We can also verify the route looks correct by selecting `Plan` on the EFIS control panel and watching the ND as we scroll through.
 
-!!! warning "USR Waypoints (only on Stable version)"
-    One thing to note are the USR waypoints the sim inputs into the flight plan. These are pseudo waypoints the simulator creates to draw the flight plan.
-
-    There is a small bug in the simulator where the USR waypoint on arrival may bug out and proceed direct to runway. Please be aware and use selected HDG to mitigate this issue.
-
 <!-- TODO: Update when Secondary F-PLAN is available -->
 ### **^^S^^**ECONDARY FLIGHT PLAN
 
@@ -304,9 +299,6 @@ This works much in the same way as the examples above.
 
 ### **^^I^^**NIT FUEL PRED
 
-!!! warning "Stable Version Difference"
-    This MCDU page was previously known as INIT B. The updated Honeywell FMS now refers to this page as INIT FUEL PRED. Please be aware of these differences.
-
 To navigate to the `INIT FUEL PRED` page we first have to select the `INIT` button. Once on `INIT A` use the horizontal slew keys to switch the page to `INIT FUEL PRED`.
 
 On this page, we can input our zero fuel weight (ZFW) and zero fuel weight center of gravity (ZFWCG).
@@ -329,7 +321,7 @@ Now we can add our fuel on board (FOB). The amount we input in this field can be
 
 !!! info "Loading Fuel"
 
-    Via the EFB - [Learn How](../../fbw-a32nx/feature-guides/flyPad/dispatch.md#fuel-page)
+    Via the EFB - [Learn How](../../fbw-a32nx/feature-guides/flypados3/dispatch.md#fuel-page)
 
 ^^ECAM FOB^^
 

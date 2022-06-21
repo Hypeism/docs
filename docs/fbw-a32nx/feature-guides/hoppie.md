@@ -1,11 +1,13 @@
 # Hoppie ACARS
 
-!!! warning "Not available in the Stable Version"
-
 !!! warning "Requires credentials with Hoppie service"
 
 !!! warning "Development in progress"
     The Hoppie ACARS system is a complex system and we have decided to develop and release it step-by-step. So please be aware that not all features are available in the early releases and that we will add additional functionality over time.
+
+    !!! danger ""
+        This page will be current for Stable version 0.8.0. Any changes to our development branch will be noted with the appropriate flag or indicator. Please be aware of any 
+        differences when using our CPDLC implementation.
 
     The current version has the following features:
 
@@ -17,11 +19,11 @@
     - Departure Clearance (DCL)
     - Oceanic Clearance (OCL)
     - Realistic datalink communication simulation (VHF+VDL3)
+    - Pilot requests: Vert & Lat requests, Text
 
     The currently planned future releases are adding these features:
 
     - Datalink Status
-    - Pilot requests: Vert & Lat requests, Text
     - Other pilot requests: E.g. "When can we expect..."
     - Emergency
     - Controller report-requests and automatic preparation of pilot replies
@@ -70,7 +72,7 @@ It is required to configure the A32NX to use the Hoppie system. All configuratio
 
 ### ATSU/AOC
 
-The Hoppie logon code needs to be set in the [EFB Settings ATSU/AOC](./flyPad/settings.md#atsuaoc) page.
+The Hoppie logon code needs to be set in the [EFB Settings ATSU/AOC](flypados3/settings.md#atsuaoc) page.
 
 ![ATSU/AOC](../assets/feature-guides/hoppie/efb-settings-atsu-aoc-page.png "ATSU/AOC page"){loading=lazy}
 
@@ -78,12 +80,17 @@ The logon code needs to be set in "Hoppie User ID".
 
 ### Turning on Hoppie ACARS
 
-The Hoppie ACARS system will log you in automatically provided the following items are complete:
+!!! tip ""
+    Please ensure that the Hoppie toggle is set to `Enabled` within the EFB. This can be found on the EFB Settings page under ATSU/AOC. (*Not pictured above*).
+
+    This is important to ensure that a connection is established.
+
+Once the above toggle is set appropriately, the Hoppie ACARS system will log you in automatically provided the following items are complete:
 
 - Logon code is entered.
 - A flight number is set.
 - The weather source is set to VATSIM or IVAO.
-    - See [EFB Settings ATSU/AOC](flyPad/settings.md#atsuaoc).
+    - See [EFB Settings ATSU/AOC](flypados3/settings.md#atsuaoc).
 
 ## Example flight
 
@@ -239,7 +246,7 @@ Fifteen (15) minutes after passing the entry point you need to set your squawk t
 
 To receive ATIS information and setup auto update of specific ATIS go to the ATC COMM menu and click on `ATIS`.
 
-The source for your ATIS information can be configured in the EFB Settings page: [EFB ATSU-AOC Options](./flyPad/settings.md#atsuaoc)
+The source for your ATIS information can be configured in the EFB Settings page: [EFB ATSU-AOC Options](flypados3/settings.md#atsuaoc)
 
 !!! note "MCDU ATC COMM Menu"
     !!! block ""

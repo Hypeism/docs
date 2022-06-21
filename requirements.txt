@@ -1,5 +1,7 @@
-mkdocs-material==8.2.8
+mkdocs-material==8.3.3
 mkdocs-awesome-pages-plugin
 mkdocs-git-revision-date-localized-plugin
 mkdocs-redirects
 mkdocs-exclude-search
+mkdocs-embed-external-markdown
+mike

@@ -9,24 +9,24 @@ thread to report any issues - [How to Report Issues](#how-to-report-issues).
 
 --}
 
-!!! danger "No Support for Experimental - use at own risk"
-    Please do not seek support for the Experimental Version on Discord and only report issues if you have read this page and the reported and known issues.
+!!! danger "Do not expect support for the experimental version - use at own risk!"
+    Please ensure that you have at least read this page and the known issues before reporting issues in the appropriate threads on our Discord server.
+
+    We ask that you understand that we may not offer support for any experimental issues due to the nature of this version. We will happily answer questions time permitting.
 
 ## Implemented Features for Testing
 
+### Pause at Top of Descent (TOD)
+
+- New setting in located in the EFB under Realism - Pause at TOD (configurable by distance between 0-50 nm before TOD)
+- When enabled, flight will pause at the specified distance before TOD
+- If the TOD point shifts before your present position, or AP mode reverts in CRZ, this will pause the simulation.
+
 ### Hydraulic Gear System
 
-- Rigid body physics of doors and gears
-- Dual LGCIU computers implementation with possible failures
-    - Cycling gear handle will switch over to the other LGCIU if available
-- Landing gear lever baulk lock mechanism (both unpowered LGCIUs will lock lever down)
-- Unpowered LGCIU 1 will cause gear light indicator to fail
-- All proximity sensors simulated and some (for now) can be failed
-- Hydraulic system simulated
-    - Security valve closed above 260kts
-    - All doors / gears / uplock / downlock actuators
-    - Mechanical system of gravity extension can control shut-off / vent valve and uplocks
-- Gravity extension by keeping pressed in-game binding "GEAR EMERGENCY HANDLE TOGGLE" until all gears unlocked
+Feature released in Development Version. See our guide for usage and known issues.
+
+[Custom Hydraulics Guide](../feature-guides/custom-hydraulics.md){.md-button}
 
 ### Vertical Guidance
 
@@ -51,53 +51,30 @@ These features are not yet available but will be implemented at a later time.
 
 ### flyPadOS Version 3 (EFB)
 
-- Completely new design
-- Improved Dashboard
-    - Flight info
-    - Customizable info section for:
-        - Weather
-        - Pinned charts
-        - Pinned checklists 
-        - Maintenance 
-- Stateful (remembers tabs and content of pages)
-- Improved ground service pages
-- Improved pushback tool
-- Improved performance calculators
-- Improved navigation charts page
-    - Improved Navigraph chart support 
-        - Current position on chart
-        - Fullscreen mode
-        - Easier search and selection
-    - Support for pinning of charts
-- Improved online ATC page
-- Improved failure support incl. categories and search
-- Interactive checklists incl. autofill and option to pin to dashboard
-- Presets for customizable lighting settings and predefined aircraft states
-- Improved settings (better structure and more configuration options)
-- Onscreen keyboard
-- Tooltips
-- Themes
-    - Blue
-    - Dark
-    - Light
-- Multilingual - English, French, Spanish, German, Russian - more to come....
+Feature released in Development Version. See our guide for usage and known issues.
+
+[flyPadOS 3](../feature-guides/flypados3/index.md){.md-button}
 
 #### EFB Planned Implementations
 
 These features are not yet available but are generally planned and might be implemented at a later time.
 
-- Support for local files (PFD, images) - requires local-api server (not yet merged)
-- Improvements to pushback page
+- Support for local files (PFD, images) - requires FlyByWire SimBridge (not yet merged)
 
 ## Known Issues
 
-### Hydraulic Gear System Issues
+### Pause at TOD Issues
 
-- Doors animations are wrong due to default 3D model issues. Door positions are internally simulated correctly
-    - Doors will appear closed after gravity extension visually, but they stay opened internally
-- Gravity extension can't be reverted. It's possible internally but feature is turned off until handle animation works
-- Wheels page not updated yet
-- Sounds might have some issues, update is coming soon (and it's amazing)
+- Since the feature is linked to vertical guidance, having an inaccurate T/D or missing T/D may not pause the simulation.
+
+!!! warning "Sim Limitations"
+    Note that while aircraft simulation is suspended (i.e. fuel consumption, airspeed, altitude, physics), environmental simulation will continue (Notably Live Weather, Live Traffic/AI Traffic). Consequences of this include that TCAS TA/RAs will still be issued and if there is a significant change in the weather over time (say a few hours), your vertical descent profile and performance figures may no longer be accurate, which means that the actual T/D point may now have shifted from the originally calculated value.
+
+    The timestamp issued in the pause pop-up shows your real local system's time (localized to your locale) to help mitigate against this problem.
+
+    This is considered a sim limitation as the pause event we utilize does not affect the MSFS world environment. Along this line of thinking, we speculate that without historical live weather and traffic, it would not possible to inject or restore the state that the world was in when the pause was initiated (the time slider in the weather toolbar only affects lighting and will still reflect live wind and weather data).
+
+    Flying using a weather preset and without AI/live traffic avoids this limitation entirely, but would also be a compromise in other ways.
 
 ### Vertical Guidance Issues
 
@@ -111,15 +88,6 @@ These features are not yet available but are generally planned and might be impl
 - Fuel predictions in the MCDU are not very accurate.
 - Descent guidance is sensitive to QNH changes. This is partially due to an inaccuracy in MSFS' atmospheric model.
 - Winds are not yet taken into account for all phases of flight.
-
-### flyPadOSv3 Issues
-
-- Local files does not work yet. Needs additional feature PR ([local-api](https://github.com/flybywiresim/a32nx/pull/6411/){target=new})
-- Pushback page: not yet fully functional or complete - changes to be expected
-- Stuck notifications are caused by CSS animations being disabled.
-    - Fix: `General Options` -> `Accessibility` -> Turn On `Menu Animations` under `User Interface` 
-- Translations not yet complete / Missing translations and layout issues to be expected
-- Tooltips not yet complete
 
 ## How to Report Issues
 
@@ -142,7 +110,7 @@ These features are not yet available but are generally planned and might be impl
 
     {--
 
-    Do not expect support or immediate solutions for your issues. We will collect all issues to fix and improve features in testing continuously.
+    Support or immediate solutions for your issues is **not guranteed**. We will collect all issues to fix and improve features in testing continuously.
 
     --}
 
@@ -151,4 +119,3 @@ These features are not yet available but are generally planned and might be impl
 ### Download and Install
 
 See [Installation Guide](../installation.md#downloads).
-

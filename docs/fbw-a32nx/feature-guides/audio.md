@@ -4,9 +4,9 @@ This page provides an overview of the various audio settings available in the A3
 
 These settings can be found on the EFB:
 
-![EFB Audio Settings](../assets/flypad/flypad-settings-audio.png)
+![EFB Audio Settings](../assets/flypados3/flypad-settings-audio.png)
 
-For information on the other settings available on the EFB visit our [flyPad Settings](flyPad/settings.md) page.
+For information on the other settings available on the EFB visit our [flyPad Settings](flypados3/settings.md) page.
 
 ## Passenger Simulation
 
@@ -14,8 +14,6 @@ For information on the other settings available on the EFB visit our [flyPad Set
     The cockpit door in the A32NX is simulating a real A320 cockpit door which in consequence dampens most of the sounds from the passenger cabin. 
 
     If you want to enjoy the Passenger Ambience sounds make sure it is open.
-
-!!! warning "Passenger simulation audio and flight crew announcements is not available on the Stable Version"
 
 We have included various settings that simulate flight crew interactions with passengers on board.
 
